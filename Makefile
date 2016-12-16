@@ -2,7 +2,7 @@
 CFLAGS=-Wall
 CC=gcc $(CFLAGS)
 
-all: resolver test subdirs
+all: subdirs resolver test
 
 subdirs:
 	mkdir bin
