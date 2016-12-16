@@ -1,2 +1,2 @@
-bin/course
+bin/*
 obj/*.o
