@@ -2,7 +2,11 @@
 CFLAGS=-Wall
 CC=gcc $(CFLAGS)
 
-all: resolver test
+all: resolver test subdirs
+
+subdirs:
+	mkdir bin
+	mkdir obj
 
 resolver: obj/resolver.o obj/sqr_eqn.o
 	$(CC) -o bin/resolver obj/resolver.o obj/sqr_eqn.o -lm
