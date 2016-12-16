@@ -2,7 +2,7 @@
 CFLAGS=-Wall
 CC=gcc $(CFLAGS)
 
-all: resolver tests
+all: resolver test
 
 resolver: obj/resolver.o obj/sqr_eqn.o
 	$(CC) -o bin/resolver obj/resolver.o obj/sqr_eqn.o -lm
@@ -13,7 +13,7 @@ obj/resolver.o: src/main.c src/sqr_eqn.h
 obj/sqr_eqn.o: src/sqr_eqn.c src/sqr_eqn.h
 	$(CC) -o obj/sqr_eqn.o -c src/sqr_eqn.c
 
-tests: obj/test.o obj/ctest.o
+test: obj/test.o obj/ctest.o
 	$(CC) -o bin/tests obj/test.o obj/ctest.o obj/sqr_eqn.o -lm
 
 obj/test.o: test/test.c
