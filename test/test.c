@@ -4,7 +4,7 @@
 CTEST(sqrt_suite, root_test_two)
 {
 	//Given
-	const double a = 4.00;
+	const double a = 1.00;
 	const double b = -3.00;
 	const double c = 2.00;
 
